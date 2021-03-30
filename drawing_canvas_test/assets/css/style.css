@@ -1,0 +1,142 @@
+* {
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-family: 'Encode Sans Expanded', sans-serif; 
+}
+
+/* Navigation bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+
+nav a {
+    font-size: 2em;
+}
+
+nav div {
+    margin: 1em 0.5em;
+    padding: 2em 1em;
+}
+
+
+/* Hero Banner */
+
+.hero {
+    background-color: lightgray;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero h1 {
+    padding-top: 40vh;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.hero div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: .3rem 1rem;
+    border: 1px black solid;
+    border-radius: 12px;
+}
+
+.hero .cta0 {
+    background-color: grey;
+}
+
+
+/* Main Body */
+
+.main{
+    background-color: #eeeeee;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-bottom: 10vh;
+}
+
+.main h2 {
+    font-size: 3rem;
+    padding: 2em 2em 1em;
+}
+
+.main h4 {
+    border-left: 1px black solid;
+    margin-top: 1rem;   
+    padding-left: 0.5rem;
+}
+
+.main .inactive {
+    color: gray;
+}
+
+.main .inactive:hover {
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container .flex-1 {
+    flex: 1 1 auto;
+    width: 5vw;
+    margin-left: 4em;
+}
+
+.container h4 {
+    font-size: 1.125rem;
+}
+
+.container .flex-2 {
+    width: 10%;
+    flex: 2 2 auto;
+    margin-right: 10em;
+}
+
+.container .flex-2 p:first-child {
+    margin-bottom: 40vh;
+}
+
+.container .flex-3 {
+    flex: 3 3 auto;
+}
+
+.container img {
+    width: 30vw;
+}
+
+/* Footer */
+
+footer {
+    height: 30vh;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 15vh;
+}
