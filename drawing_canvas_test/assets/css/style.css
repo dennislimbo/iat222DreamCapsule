@@ -7,6 +7,39 @@ h1, h2, h3, h4, a {
     font-weight: 500;
 }
 
+h1 {
+    font-size: 5rem;
+}
+
+h2 { 
+    font-size: 3rem;
+}
+
+h3 { 
+    font-size: 2.25rem;
+}
+
+h4 { 
+    font-size: 1.125rem;
+}
+
+p { 
+    font-size: 1rem;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable {
+    height: 60vh; 
+    overflow: scroll;
+    overflow-x: hidden; 
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
 a {
     text-decoration: none;
@@ -22,11 +55,16 @@ p {
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 nav a {
     font-size: 2em;
+    color: white;
 }
 
 nav div {
@@ -34,13 +72,40 @@ nav div {
     padding: 2em 1em;
 }
 
+#myLinks {
+    display: none;
+    position: absolute;
+    top: 3em;
+    right: 0px;
+    font-size: 2em;
+}
+
+#myLinks a {
+    display: block;
+    position: relative;
+    right: 0;
+    top: 0;
+    text-align: right;
+    margin-right: 1.5rem;
+    color: white;
+    margin-bottom: 1em;
+    z-index: 5;
+    font-family: 'Poppins', sans-serif;
+}
 
 /* Hero Banner */
+#myVideo {
+    /* height: 100vh; */
+    width: 100%;
+}
 
 .hero {
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    position: absolute;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    top: 0;
+    color: white;
 }
 
 .hero h1 {
@@ -59,41 +124,69 @@ nav div {
     margin-left: 1rem;
     margin-right: 1rem;
     padding: .3rem 1rem;
-    border: 1px black solid;
+    border: 1px white solid;
     border-radius: 12px;
+    color: white;
+    width: 7vw;
 }
 
 .hero .cta0 {
-    background-color: grey;
+    background-color: #3A00F3;
 }
 
+.hero p {
+    text-align: center;
+    position: relative;
+    top: 20vw;
+}
 
 /* Main Body */
 
 .main{
-    background-color: #eeeeee;
-    padding-left: 10vh;
+    background-color: #F6F6F6;
+    padding-left: 20vh;
     padding-right: 10vh;
     padding-bottom: 10vh;
 }
 
+.mainCaption {
+    padding: 6em 6em 1em;
+    color: #3A00F3;
+}
+
+
+
 .main h2 {
     font-size: 3rem;
-    padding: 2em 2em 1em;
+    padding-left: 2em;
+    padding-bottom: 2em;
 }
 
 .main h4 {
-    border-left: 1px black solid;
-    margin-top: 1rem;   
+    margin-bottom: 1rem;   
     padding-left: 0.5rem;
 }
 
+.main .active{
+    border-left: 2px #3A00F3 solid;
+}
+
 .main .inactive {
+    border-left: 2px #3A00F320 solid;
     color: gray;
 }
 
 .main .inactive:hover {
+    border-left: 2px #3A00F3 solid;
     color: black;
+}
+
+.main .shadow {
+    box-shadow: -7px 10px 20px 0px rgba(0,0,0,0.20);
+}
+
+#mainContent {
+    margin-bottom: 20vh;
 }
 
 .container {
@@ -101,10 +194,15 @@ nav div {
     justify-content: center;
 }
 
+
 .container .flex-1 {
     flex: 1 1 auto;
-    width: 5vw;
+    width: 10vw;
     margin-left: 4em;
+    margin-right: 5vw;
+    position: sticky;
+    top: 10em;
+    align-self: flex-start;
 }
 
 .container h4 {
@@ -112,7 +210,7 @@ nav div {
 }
 
 .container .flex-2 {
-    width: 10%;
+    width: 20%;
     flex: 2 2 auto;
     margin-right: 10em;
 }
@@ -125,18 +223,69 @@ nav div {
     flex: 3 3 auto;
 }
 
-.container img {
-    width: 30vw;
+.container .flex-3 .about {
+    width: 40%;
+    margin-right: 5rem;
+}
+
+/* third row */
+.spaceBetween {
+    justify-content: space-between;
+    margin-top: 30vh;
+    margin-bottom: 5vh;
+}
+
+.spaceBetween p {
+    text-align: center;
+    margin-right: 0px;
+}
+
+/* Bottom CTA */
+.bottomCta {
+    background-color: #3A00F3;
+    text-align: center;
+    color: white;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.bottomCta div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.bottomCta h2 {
+    margin-bottom: 1rem;
+}
+
+.bottomCta .cta2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: .3rem 1rem;
+    color: white;
+    width: 7vw;
+    border-radius: 12px;
+    background-color: #0D0E0E;
+}
+
+.bottomCta .cta1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: .3rem 1rem;
+    border: 1px white solid;
+    border-radius: 12px;
+    color: white;
+    width: 7vw;
 }
 
 /* Footer */
-
 footer {
-    height: 30vh;
+    height: 10vh;
 }
 
 footer p {
     text-align: center;
     font-size: 1.5em;
-    padding-top: 15vh;
+    padding-top: 5vh;
 }

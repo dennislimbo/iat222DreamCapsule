@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width. initial-scale=1.0">
@@ -9,68 +9,126 @@
         <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Poppins:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/sketch.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        
+        <script src="https://kit.fontawesome.com/db490c860c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-
+        <!-- video background -->
+        <video autoplay muted loop id="myVideo">
+            <source src="assets/video/Colorloop.mp4" type="video/mp4">
+        </video>
+        
         <!-- navigation -->
         <nav>
             <div>
-                <a href="index.html">TBD</a>
+                <a href="index.html"><img src="assets/images/tbd-logo-minim.png" alt="tbd logo"></a>
             </div>
             <div>
-                <a href="#">H</a>
+                <a href="javascript:void(0);" class="icon" onclick="navBar()"><i class="fas fa-bars"></i></a>
             </div>
         </nav>
+        
+        <div id="myLinks">
+            <a href="">Home</a>
+            <a href="draw.html">Participate</a>
+            <a href="">View Collection</a>
+            <a href="">Contact</a>
+        </div>
 
         <!-- hero -->
+        
+
         <div class="hero">
-            <h1>Project Name</h1>
+            <h1>Dream Capsule</h1>
             <div>
-                <a class="cta0" href="#">CTA 0</a>
-                <a class="cta1" href="#">CTA 1</a>
+                <a class="cta0" href="draw.html">Participate</a>
+                <a class="cta1" href="#">View</a>
             </div>
-            
+            <p>Collection of the world's most memorable dreams</p>
         </div>
         
 
         <!-- main body -->
         <div class="main">
-            <h2>Description</h2>
+            <p class="mainCaption">Inside the Capsule</p>
+            <h2>How It Works</h2>
+            <p id="demo"></p>
 
+            <!-- main content -->
             <div class="container">
                 <!-- column 1 -->
                 <div class="flex-1">
-                    <h4 class="active">Category 01</h4>
-                    <h4 class="inactive">Category 02</h4>
-                    <h4 class="inactive">Category 03</h4>
+                    <h4 id="homeAbout" class="active">About</h4>
+                    <h4 id="homePreview" class="inactive">Preview</h4>
+                    <h4 id="homeRecent" class="inactive">Recent</h4>
                 </div>
                 <!-- column 2 -->
-                <div class="flex-2">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Aliquam dignissim vitae urna at condimentum. Praesent facilisis 
-                        ullamcorper orci quis commodo. Suspendisse ac varius lorem. Phasellus
-                         egestas justo vitae dapibus commodo. Suspendisse pulvinar gravida varius. 
-                         Phasellus maximus odio in est auctor pharetra. 
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Aliquam dignissim vitae urna at condimentum. Praesent facilisis 
-                        ullamcorper orci quis commodo. Suspendisse ac varius lorem. Phasellus
-                         egestas justo vitae dapibus commodo. Suspendisse pulvinar gravida varius. 
-                         Phasellus maximus odio in est auctor pharetra. 
-                    </p>
+                <div id="mainContent" class="flex-3 scrollable" onscroll="divScroll()">
+                    <div class="container">
+                        <p id="mainContentAbout" class="about">
+                            Welcome to our collective time capsule where dreams can be visualized and conceptualized. Participants from all over the world are able to add on to our project by submitting their most memorable dreams to this project. Either as a contributor or spectator, there are no limitations to who can take part and experience the ever growing digitized collection of the world’s most memorable dreams. 
+                        </p>
+                        <img class="shadow" src="assets/images/imageSample.png" alt="sample image">
+                    </div>
+                    <img class="shadow" style="margin-top: 15vw; margin-left: auto; margin-right: auto; width: auto; display: block;" src="assets/images/imageSample.png" alt="sample image">
+                    <div class="container spaceBetween">
+                        <div>
+                            <img src="assets/images/homePhoto1.png" alt="sample image">
+                            <p>Adam, USA</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/homePhoto2.png" alt="sample image">
+                            <p>Eve, Australia</p>
+                        </div>
+                        <div>
+                            <img src="assets/images/homePhoto3.png" alt="sample image">
+                            <p>Kanye, Philippines</p>
+                        </div>
+                    </div>
                 </div>
                 <!-- column 3 -->
-                <div class="flex-3">
-                    <img src="assets/images/imageSample.png" alt="sample image">
+                <!-- <div class="flex-3">
+                    <img class="shadow" src="assets/images/imageSample.png" alt="sample image">
+                </div> -->
+            </div>
+            
+
+            <!-- Temporary space
+            <img class="shadow" style="margin-left: auto; margin-right: auto; width: auto; display: block;" src="assets/images/imageSample.png" alt="sample image">
+
+            <div class="container">
+                <div>
+                    <img src="assets/images/homePhoto1.png" alt="sample image">
+                    <p>Adam, USA</p>
                 </div>
+                <div>
+                    <img src="assets/images/homePhoto2.png" alt="sample image">
+                    <p>Eve, Australia</p>
+                </div>
+                <div>
+                    <img src="assets/images/homePhoto3.png" alt="sample image">
+                    <p>Kanye, Philippines</p>
+                </div>
+            </div>  -->
+            
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="bottomCta">
+            <div>
+                <h2>Which pill will you take?</h2>
+            </div>
+            <div>
+                <a class="cta2" href="draw.html">Participate</a>
+                <a class="cta1" href="#">View</a>
             </div>
         </div>
 
         <footer>
             <p>Footer</p>
         </footer>
+
+        <script src="assets/js/home.js"></script>
     </body>
 </html>
