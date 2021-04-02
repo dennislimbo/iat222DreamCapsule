@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
 }
 
 .scrollable {
-    height: 60vh; 
+    height: 40vh; 
     overflow: scroll;
     overflow-x: hidden; 
 }
@@ -235,6 +235,7 @@ nav div {
     margin-bottom: 5vh;
 }
 
+
 .spaceBetween p {
     text-align: center;
     margin-right: 0px;
@@ -282,6 +283,8 @@ nav div {
 /* Footer */
 footer {
     height: 10vh;
+    background-color: #0D0E0E;
+    color: white;
 }
 
 footer p {

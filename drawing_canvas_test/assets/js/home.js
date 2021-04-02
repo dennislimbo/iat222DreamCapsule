@@ -9,16 +9,17 @@ function navBar() {
 }
 
 
-// need to fix the scroll function so that it works with the div
 // window.onscroll = function() {
-//     var about = document.getElementById('homeAbout');
-//     var preview = document.getElementById('homePreview');
-//     var recent = document.getElementById('homeRecent');
-//     if ( window.pageYOffset > 1000 ) {
-//         preview.classList.add("active");
-//         preview.classList.remove("inactive");
+//     var header = document.getElementById("header");
+//     var elmnt = document.getElementById("mainContent");
+//     var x = header.scrollLeft;
+//     var y = window.scrollY;
+    
+//     if (window.scrollY > 1300) {
+//             // document.getElementById ("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y + "px";
+//         elmnt.style.overflow = "scroll";
 //     } else {
-//         preview.classList.remove("active");
+//         elmnt.style.overflow = "hidden";
 //     }
 // }
 
@@ -36,14 +37,14 @@ function divScroll() {
         recent.classList.add("inactive");
         recent.classList.remove("active");
     }
-    if (elmnt.scrollTop > 399 && elmnt.scrollTop < 899) {        
+    if (elmnt.scrollTop > 399 && elmnt.scrollTop < 900) {        
         about.classList.add("inactive");
         about.classList.remove("active");
         preview.classList.add("active");
         preview.classList.remove("inactive");
         recent.classList.add("inactive");
         recent.classList.remove("active");
-    } else if (elmnt.scrollTop > 899) {
+    } else if (elmnt.scrollTop > 900) {
         about.classList.add("inactive");
         about.classList.remove("active");
         preview.classList.add("inactive");
