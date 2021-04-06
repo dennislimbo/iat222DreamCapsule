@@ -1,22 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width. initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Poppins:wght@500&display=swap" rel="stylesheet">
         <title>Canvas Drawing Test</title>
         <link rel="stylesheet" href="assets/css/sketch.css">
+        <script src="https://kit.fontawesome.com/db490c860c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
+
+        <!-- navigation -->
+        <nav>
+            <div>
+                <a href="index.html"><img src="assets/images/tbd-logo-minim.png" alt="tbd logo"></a>
+            </div>
+            <div>
+                <a href="javascript:void(0);" class="icon" onclick="navBar()"><i class="fas fa-bars"></i></a>
+            </div>
+        </nav>
+
+        <div id="myLinks">
+            <a href="">Home</a>
+            <a href="draw.html">Participate</a>
+            <a href="">View Collection</a>
+            <a href="">Contact</a>
+        </div>
+
+
+        <!-- text overlay -->
+        <div class="content">  
+            <h1>What is your most memorable dream?</h1>
+            <p>Please select a colour to share your dream.</p>
+        </div>
+        
+
+        <!-- drawing canvas -->
         <div id="drawingComp">
-            <canvas id="canvas"></canvas>
+            <canvas id="canvas">
+                
+            </canvas>
             <div class="controls">
-                <label id="clearLabel"><button id="clear">X</button> Clear</label>
-                <label id="blackColourLabel"><button id="black">X</button> Black</label>
-                <label id="whiteColourLabel"><button id="white">X</button> White</label>
-                <button id="save" type="button">save</button>
+                <div>
+                    <label id="clearLabel"><button id="clear">X</button> Clear</label>
+                    <label id="blackColourLabel"><button id="black"></button> Pencil</label>
+                    <label id="whiteColourLabel"><button id="white"></button> Eraser</label> 
+                    <label id="sizeFiveLabel"><button id="sizeFive"></button></label>
+                    <label id="sizeFifteenLabel"><button id="sizeFifteen"></button></label>
+                    <label id="sizeThirtyLabel"><button id="sizeThirty"></button></label>
+                    <button id="save" type="button">submit</button>
+                </div>
+                <div>
+                    <label id="c0Label"><button id="c0"></button></label>
+                    <label id="c1Label"><button id="c1"></button></label>
+                    <label id="c2Label"><button id="c2"></button></label> 
+                    <label id="c3Label"><button id="c3"></button></label>
+                    <label id="c4Label"><button id="c4"></button></label>
+                    <label id="c5Label"><button id="c5"></button></label>
+                </div>
+                
             </div>
         </div>
+
+        
+
         
 
         <script src="assets/js/sketch.js"></script>
