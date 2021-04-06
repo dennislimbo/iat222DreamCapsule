@@ -132,6 +132,7 @@ nav div {
 
 .hero .cta0 {
     background-color: #3A00F3;
+    border: none;
 }
 
 .hero p {
@@ -281,14 +282,26 @@ nav div {
 }
 
 /* Footer */
-footer {
-    height: 10vh;
+.footer {
+    height: 30vh;
     background-color: #0D0E0E;
     color: white;
+    padding-top: 10vh;
+    /* padding-bottom: 10vh; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-footer p {
-    text-align: center;
-    font-size: 1.5em;
-    padding-top: 5vh;
+.footer .footerHeader {
+    margin-bottom: .5em;
+    font-family: 'Poppins', sans-serif;
 }
+
+.footer a {
+    display: block;
+    color: white;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    margin-bottom: .25em;
+}
+
