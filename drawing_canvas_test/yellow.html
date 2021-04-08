@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Poppins:wght@500&display=swap" rel="stylesheet">
         <title>Canvas Drawing Test</title>
         <link rel="stylesheet" href="assets/css/sketch.css">
+        <link rel="stylesheet" href="assets/css/yellow.css">
         <script src="https://kit.fontawesome.com/db490c860c.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
@@ -35,12 +36,21 @@
             <div>
                 <canvas id="canvas">  
                 </canvas>
-                <div class="buttons">
-                    <button id="save" type="button">Back</button>
-                    <button type="button" onclick="location.href='index.html';">Next</button>
+                <div class="row" style="justify-content: space-between;">
+                    <form id="my-form">
+                        <div class="row">
+                            <input type="text" name="name" id="name" value="Name">
+                            <input type="text" name="country" id="country" value="Country">
+                        </div>
+                        <textarea name="description" id="description" cols="30" rows="5">Caption your dream...</textarea>
+                    </form>
+                    <div class="buttons">
+                        <button id="previous" type="button">Back</button>
+                        <button id="next"type="button">Next</button>
+                    </div>
                 </div>
             </div>            
-            <div class="controls">
+            <div id="controls" class="controls">
                 <!-- colours -->
                 <div>
                     <label id="c0Label"><button id="c0"></button></label>

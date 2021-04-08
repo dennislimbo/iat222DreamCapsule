@@ -2,6 +2,10 @@
     font-family: sans-serif;
 }
 
+body {
+    background-color: white;
+}
+
 h1, h2, h3, h4, a {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -239,6 +243,7 @@ nav div {
 
 .spaceBetween p {
     text-align: center;
+    margin-top: 1.5em;
     margin-right: 0px;
 }
 

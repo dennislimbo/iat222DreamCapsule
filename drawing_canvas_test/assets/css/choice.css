@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #302E2E;
+}
+
+h1, h2, h3, h4, a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 { 
+    font-size: 3rem;
+}
+
+h3 { 
+    font-size: 2.25rem;
+}
+
+h4 { 
+    font-size: 1.125rem;
+}
+
+p { 
+    font-size: 1rem;
+}
+
+p, label, button {
+    font-family: 'Encode Sans Expanded', sans-serif; 
+}
+
+/* Navigation bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: lightgray; */
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+nav a {
+    font-size: 2em;
+    color: white;
+}
+
+nav div {
+    margin: 1em 0.5em;
+    padding: 2em 1em;
+}
+
+#myLinks {
+    display: none;
+    position: absolute;
+    top: 3em;
+    right: 0px;
+    font-size: 2em;
+}
+
+#myLinks a {
+    display: block;
+    position: relative;
+    right: 0;
+    top: 0;
+    text-align: right;
+    margin-right: 1.5rem;
+    color: white;
+    margin-bottom: 1em;
+    z-index: 5;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+
+/* Choice text */
+.content {
+    position: absolute;
+    left: 40vw;
+    top: 42vh;
+    /* visibility: hidden; */
+    color: white;
+}
+
+.content h1 {
+    font-size: 2.25rem;
+}
+
+
+
+/* colour choices */
+.choice {
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -o-filter: blur(50px);
+    -ms-filter: blur(50px);
+    filter: blur(50px);
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    z-index: 10;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.choice:hover {
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    width: 200px;
+    height: 200px;
+}
+
+#green {
+    background-color: #93D91F;
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+}
+
+#orange {
+    background-color: #FF6A00;
+    position: absolute;
+    top: 15vh;
+    left: 45vw;
+}
+
+#yellow {
+    background-color: #FCE200;
+    position: absolute;
+    top: 25vh;
+    right: 20vw;
+}
+
+#red {
+    background-color: #FE3B1F;
+    position: absolute;
+    bottom: 25vh;
+    left: 20vw;
+}
+
+#blue {
+    background-color: #3296D9;
+    position: absolute;
+    bottom: 15vh;
+    left: 45vw;
+}
+
+#purple {
+    background-color: #C028B9;
+    position: absolute;
+    bottom: 25vh;
+    right: 20vw;
+}
+

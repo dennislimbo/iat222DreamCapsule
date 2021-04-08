@@ -101,14 +101,62 @@ nav div {
     align-items: center;
     justify-content: center;
     margin-top: 15vh;
-    /* margin-top: 200px;
-    margin-left: 300px; */
 }
 
 #canvas {
-    border: 1px solid black;
+    border-radius: 8px 0px 0px 8px;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    height: 650px;
+    /* margin: 30px; */
 }
 
+.controls div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 8px 8px 0px;
+    background-color: lightgray;
+}
+
+
+/* point sizes */
+#sizeFive, #sizeFifteen, #sizeThirty {
+    display: inline-block;
+    margin: auto;
+    /* border: 1px solid black; */
+    border: none;
+    border-radius: 100%;
+    font-size: auto;
+    color: white;
+    background-color: #595753;
+}
+#sizeFive {
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+#sizeFifteen {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+#sizeThirty, #c0, #c1, #c2, #c3, #c4, #c5 {
+    width: 35px;
+    height: 35px;
+}
+
+#sizeFiveLabel, #sizeFifteenLabel, #sizeThirtyLabel, #clearLabel, #blackColourLabel, #whiteColourLabel, #c0Label, #c1Label, #c2Label, #c3Label, #c4Label, #c5Label {
+    margin: 10px;
+}
+
+/* Clear, pencil, eraser options */
 #clear {
     display: inline-block;
     width: 30px;
@@ -120,91 +168,28 @@ nav div {
     background-color: #e3242b;
 }
 
-#clearLabel {
-    margin: 10px;
-}
-
-.controls {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid black;
-    border-radius: 8px;
-    margin: 30px;
-    background-color: lightgray;
-}
-
-.controls div {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* point sizes */
-#sizeFive {
+#black, #white {
     display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: auto;
-    border: 1px solid black;
-    border-radius: 100%;
-    font-size: auto;
-    color: white;
-    background-color: black;
+    /* width: 30px;
+    height: 30px; */
+    /* margin: auto; */
+    /* border: 1px solid black; */
+    /* font-size: 20px; */
+    /* color: white; */
+    /* background-color: black; */
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
 }
 
-#sizeFiveLabel {
-    margin: 10px;
+#black img, #white img {
+    width: 60px;
 }
 
-#sizeFifteen {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin: auto;
-    border: 1px solid black;
-    border-radius: 100%;
-    font-size: auto;
-    color: white;
-    background-color: black;
+#blackColourLabel, #whiteColourLabel {
+    margin-left: 0px;
 }
 
-#sizeFifteenLabel {
-    margin: 10px;
-}
-
-#sizeThirty, #c0, #c1, #c2, #c3, #c4, #c5 {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    margin: auto;
-    border: 1px solid black;
-    border-radius: 100%;
-    font-size: auto;
-    color: white;
-    background-color: black;
-}
-
-#sizeThirtyLabel, #c0Label, #c1Label, #c2Label, #c3Label, #c4Label, #c5Label {
-    margin: 10px;
-}
-
-/* colour settings */
-#black {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: auto;
-    border: 1px solid black;
-    font-size: 20px;
-    color: white;
-    background-color: black;
-}
-
-#blackColourLabel {
-    margin: 10px;
-}
-
-#white {
+/* #white {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -213,36 +198,65 @@ nav div {
     font-size: 20px;
     color: black;
     background-color: white;
-}
+} */
 
-#whiteColourLabel {
-    margin: 10px;
-}
-
+/* colour settings */
 #c0, #c1, #c2, #c3, #c4, #c5 {
     border: none;
+    border-radius: 100%;
 } 
 
-#c0 {
-    background-color: #F4787E;
+/* CTA fields */
+#my-form {
+    visibility: hidden;
 }
 
-#c1 {
-    background-color: #FB444F;
+input, textarea {
+    font-family: 'Poppins', sans-serif;
 }
 
-#c2 {
-    background-color: #EF152C;
+/* temporary widths */
+input {
+    margin-top: 1vh;
+    width: 10vw;
+    margin-right: 1vw;
 }
 
-#c3 {
-    background-color: #FE3B1F;
+textarea {
+    margin-top: 1vh;
+    width: 21vw;
 }
 
-#c4 {
-    background-color: #A10008;
+
+.row {
+    display: flex;
+    flex-direction: row;
 }
 
-#c5 {
-    background-color: #6F0006;
+/* CTA Buttons */
+.buttons {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.buttons button {
+    padding: .5em 2.5em;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border-radius: 36px;
+    margin-top: 2em;
+    margin-left: 1em;
+    /* outline: none; */
+    height: fit-content;
+}
+
+#previous {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px white solid;
+}
+
+#next {
+    background-color: #3A00F3;
+    border: none;
+    z-index: 50;
 }
