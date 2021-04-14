@@ -24,6 +24,30 @@ window.addEventListener("load", () => {
     const prev = document.getElementById("previous");
     const next = document.getElementById("next");
     var state = 0;
+
+    //testing
+    // const displayBtn = document.querySelector("#display");
+    // var dataURI;
+    // displayBtn.addEventListener("click", function() {
+    //     const dataURI = canvas.toDataURL();
+    //     var request = $.ajax({
+    //         type: "POST",
+    //         url:  "assets/images",
+    //         data: { 
+    //           base64Data:dataURI
+    //         }
+    //     });
+    //     request.done(function(response) {
+    //         alert("Data posted to server!");
+    //       });
+          
+    //       request.fail(function(){
+    //         alert("Failed to send data to server!");
+    //       });
+    // });
+
+    
+    
     
     //back and next buttons behaviour
     prev.addEventListener('click', () => {

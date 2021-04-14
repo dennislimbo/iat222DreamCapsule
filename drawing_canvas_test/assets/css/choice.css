@@ -99,11 +99,11 @@ nav div {
 
 /* colour choices */
 .choice {
-    -webkit-filter: blur(50px);
-    -moz-filter: blur(50px);
-    -o-filter: blur(50px);
-    -ms-filter: blur(50px);
-    filter: blur(50px);
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
     width: 120px;
     height: 120px;
     border-radius: 100%;
@@ -112,7 +112,7 @@ nav div {
     transition: 1s;
 }
 
-.choice:hover {
+/* .choice:hover {
     -webkit-filter: blur(15px);
     -moz-filter: blur(15px);
     -o-filter: blur(15px);
@@ -120,7 +120,7 @@ nav div {
     filter: blur(15px);
     width: 200px;
     height: 200px;
-}
+} */
 
 #green {
     background-color: #93D91F;
