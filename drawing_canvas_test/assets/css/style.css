@@ -310,3 +310,12 @@ nav div {
     margin-bottom: .25em;
 }
 
+@media only screen and (max-width:1440px) {
+    .main {
+        padding-left: 7em;
+    }
+
+    .hero .cta0, .bottomCta .cta2 {
+        width: fit-content;
+    }
+}

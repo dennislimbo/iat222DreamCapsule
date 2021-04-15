@@ -257,3 +257,35 @@ h1 {
     bottom: 7vh;
     background: #FF6A00;
 }
+
+@media only screen and (max-width:1440px) {
+    #green, #backgroundGreen {
+        top: 14.5625em;
+        left: 4.25em;
+    }
+
+    #purple, #backgroundPurple {
+        left: 27.25em;
+        top: 1.625em;
+    }
+
+    #red, #backgroundRed {
+        right: 8.875em;
+        top: 7.5625em;
+    }
+
+    #blue, #backgroundBlue {
+        left: 17.0625em;
+        bottom: 3.1875em;
+    }
+
+    #yellow, #backgroundYellow {
+        right: 28.625em;
+        bottom: 11.9375em;
+    }
+
+    #orange, #backgroundOrange {
+        right: 10.3125em;
+        bottom: 3.1875em;
+    }
+}
