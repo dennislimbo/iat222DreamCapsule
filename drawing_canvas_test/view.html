@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <title>Viewer</title>
+        <link rel="stylesheet" href="assets/css/view.css">
+        <script src="https://kit.fontawesome.com/db490c860c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <!-- navigation -->
+        <nav>
+            <div>
+                <a href="index.html"><img src="assets/images/tbd-logo-minim.png" alt="tbd logo"></a>
+            </div>
+            <div>
+                <a href="javascript:void(0);" class="icon" onclick="navBar()"><i class="fas fa-bars"></i></a>
+            </div>
+        </nav>
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="choice.html">Participate</a>
+            <a href="view.html">View Collection</a>
+            <a href="mailto:tbdcollective@gmail.com">Contact</a>
+        </div>
+
+        <!-- header -->
+        <h1>Dream Capsule</h1>
+
+        <!-- floating circles of colour -->
+        <!-- green -->
+        <a href="view/green.html">
+            <div id="green" class="orb" onmouseover="PlaySound('soundGreen'); scaleOrb(this);" onmouseout="StopSound('soundGreen'); unscaleOrb(this);">
+                <p>Vibrant, Nature</p>
+            </div>
+        </a>
+        <div id="backgroundGreen" class="orb background"></div>
+
+
+        <!-- purple -->
+        <a href="view/purple.html">
+            <div id="purple" class="orb"  onmouseover="PlaySound('soundPurple'); scaleOrb(this);" onmouseout="StopSound('soundPurple'); unscaleOrb(this);">
+                <p>Graceful, Romance</p>
+            </div>
+        </a>
+        <div id="backgroundPurple" class="orb background"></div>
+
+
+        <!-- red -->
+        <a href="view/red.html">
+            <div id="red" class="orb"  onmouseover="PlaySound('soundRed'); scaleOrb(this);" onmouseout="StopSound('soundRed'); unscaleOrb(this);">
+                <p>Intensity, Passion</p>
+            </div>
+        </a>
+        <div id="backgroundRed" class="orb background"></div>
+
+
+        <!-- blue -->
+        <a href="view/blue.html">
+            <div id="blue" class="orb" onmouseover="PlaySound('soundBlue'); scaleOrb(this);" onmouseout="StopSound('soundBlue'); unscaleOrb(this);">
+                <p>Diverse, Calming</p>
+            </div>
+        </a>
+        <div id="backgroundBlue" class="orb background"></div>
+
+
+        <!-- yellow -->
+        <a href="view/yellow.html">
+            <div id="yellow" class="orb" onmouseover="PlaySound('soundYellow'); scaleOrb(this);" onmouseout="StopSound('soundYellow'); unscaleOrb(this);">
+                <p>Striking, Happiness</p>
+            </div>
+        </a>
+        <div id="backgroundYellow" class="orb background"></div>
+
+
+        <!-- orange -->
+        <a href="view/orange.html">
+            <div id="orange" class="orb" onmouseover="PlaySound('soundOrange'); scaleOrb(this);" onmouseout="StopSound('soundOrange'); unscaleOrb(this);">
+                <p>Lively, Energy</p>
+            </div>
+        </a>
+        <div id="backgroundOrange" class="orb background"></div>
+
+
+        <div class="audio">
+            <audio id='soundGreen' src="assets/audio/Green.mp3" loop></audio>
+            <audio id='soundPurple' src="assets/audio/Purple.mp3" loop></audio>
+            <audio id='soundRed' src="assets/audio/Red.mp3" loop></audio>
+            <audio id='soundBlue' src="assets/audio/Blue.mp3" loop></audio>
+            <audio id='soundYellow' src="assets/audio/Yellow.mp3" loop></audio>
+            <audio id='soundOrange' src="assets/audio/Orange.mp3" loop></audio>
+        </div>
+        <script src="assets/js/view.js"></script>
+    </body>
+</html>

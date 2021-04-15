@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <title>Participant - Choice</title>
+        <link rel="stylesheet" href="assets/css/choice.css">
+        <script src="https://kit.fontawesome.com/db490c860c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <!-- navigation -->
+        <nav>
+            <div>
+                <a href="index.html"><img src="assets/images/tbd-logo-minim.png" alt="tbd logo"></a>
+            </div>
+            <div>
+                <a href="javascript:void(0);" class="icon" onclick="navBar()"><i class="fas fa-bars"></i></a>
+            </div>
+        </nav>
+
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="choice.html">Participate</a>
+            <a href="view.html">View Collection</a>
+            <a href="mailto:tbdcollective@gmail.com">Contact</a>
+        </div>
+
+
+        <!-- text overlay -->
+        <div class="content">  
+            <h1 id="colourHead">
+                What is your most <br/> 
+                memorable dream?
+            </h1>
+            <p id="colourCopy">Please select a colour to share your dream.</p>
+        </div>
+
+        <!-- colour choices -->
+        <!-- green -->
+        <a href="green.html">
+            <div onmouseover="choiceHover(this)" onmouseout="choiceOut(this)" id="green" class="choice"></div>
+        </a>
+        <!-- orange -->
+        <a href="orange.html">
+            <div onmouseover="choiceHover(this)" onmouseout="choiceOut(this)" id="orange" class="choice"></div>
+        </a>
+        <!-- yellow -->
+        <a href="yellow.html">
+            <div onmouseover="choiceHover(this)" onmouseout="choiceOut(this)" id="yellow" class="choice"></div>
+        </a>
+        <!-- red -->
+        <a href="red.html">
+            <div onmouseover="choiceHover(this)" onmouseout="choiceOut(this)" id="red" class="choice"></div>
+        </a>
+        <!-- blue -->
+        <a href="blue.html">
+            <div onmouseover="choiceHover(this)" onmouseout="choiceOut(this)" id="blue" class="choice"></div>
+        </a>
+        <!-- purple -->
+        <a href="purple.html">
+            <div onmouseover="choiceHover(this)" onmouseout="choiceOut(this)" id="purple" class="choice"></div>
+        </a>
+        
+        <script src="assets/js/choice.js"></script>
+    </body>
+</html>

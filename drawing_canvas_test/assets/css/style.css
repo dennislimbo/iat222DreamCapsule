@@ -2,6 +2,10 @@
     font-family: sans-serif;
 }
 
+body {
+    background-color: white;
+}
+
 h1, h2, h3, h4, a {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -190,6 +194,10 @@ nav div {
     margin-bottom: 20vh;
 }
 
+.main p {
+    color: black;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -239,6 +247,7 @@ nav div {
 
 .spaceBetween p {
     text-align: center;
+    margin-top: 1.5em;
     margin-right: 0px;
 }
 
@@ -305,3 +314,12 @@ nav div {
     margin-bottom: .25em;
 }
 
+@media only screen and (max-width:1440px) {
+    .main {
+        padding-left: 7em;
+    }
+
+    .hero .cta0, .bottomCta .cta2 {
+        width: fit-content;
+    }
+}
