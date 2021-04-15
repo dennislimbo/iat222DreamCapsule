@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Poppins:wght@500&display=swap" rel="stylesheet">
-        <title>Canvas Drawing Test</title>
+        <title>Viewer</title>
         <link rel="stylesheet" href="assets/css/view.css">
         <script src="https://kit.fontawesome.com/db490c860c.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -26,7 +26,7 @@
             <a href="index.html">Home</a>
             <a href="choice.html">Participate</a>
             <a href="view.html">View Collection</a>
-            <a href="">Contact</a>
+            <a href="mailto:tbdcollective@gmail.com">Contact</a>
         </div>
 
         <!-- header -->
@@ -35,7 +35,7 @@
         <!-- floating circles of colour -->
         <!-- green -->
         <a href="view/green.html">
-            <div id="green" class="orb" onmouseover="PlaySound('soundGreen')" onmouseout="StopSound('soundGreen')">
+            <div id="green" class="orb" onmouseover="PlaySound('soundGreen'); scaleOrb(this);" onmouseout="StopSound('soundGreen'); unscaleOrb(this);">
                 <p>Vibrant, Nature</p>
             </div>
         </a>
@@ -44,7 +44,7 @@
 
         <!-- purple -->
         <a href="view/purple.html">
-            <div id="purple" class="orb"  onmouseover="PlaySound('soundPurple')" onmouseout="StopSound('soundPurple')">
+            <div id="purple" class="orb"  onmouseover="PlaySound('soundPurple'); scaleOrb(this);" onmouseout="StopSound('soundPurple'); unscaleOrb(this);">
                 <p>Graceful, Romance</p>
             </div>
         </a>
@@ -53,7 +53,7 @@
 
         <!-- red -->
         <a href="view/red.html">
-            <div id="red" class="orb"  onmouseover="PlaySound('soundRed')" onmouseout="StopSound('soundRed')">
+            <div id="red" class="orb"  onmouseover="PlaySound('soundRed'); scaleOrb(this);" onmouseout="StopSound('soundRed'); unscaleOrb(this);">
                 <p>Intensity, Passion</p>
             </div>
         </a>
@@ -62,7 +62,7 @@
 
         <!-- blue -->
         <a href="view/blue.html">
-            <div id="blue" class="orb" onmouseover="PlaySound('soundBlue')" onmouseout="StopSound('soundBlue')">
+            <div id="blue" class="orb" onmouseover="PlaySound('soundBlue'); scaleOrb(this);" onmouseout="StopSound('soundBlue'); unscaleOrb(this);">
                 <p>Diverse, Calming</p>
             </div>
         </a>
@@ -71,7 +71,7 @@
 
         <!-- yellow -->
         <a href="view/yellow.html">
-            <div id="yellow" class="orb" onmouseover="PlaySound('soundYellow')" onmouseout="StopSound('soundYellow')">
+            <div id="yellow" class="orb" onmouseover="PlaySound('soundYellow'); scaleOrb(this);" onmouseout="StopSound('soundYellow'); unscaleOrb(this);">
                 <p>Striking, Happiness</p>
             </div>
         </a>
@@ -80,7 +80,7 @@
 
         <!-- orange -->
         <a href="view/orange.html">
-            <div id="orange" class="orb" onmouseover="PlaySound('soundOrange')" onmouseout="StopSound('soundOrange')">
+            <div id="orange" class="orb" onmouseover="PlaySound('soundOrange'); scaleOrb(this);" onmouseout="StopSound('soundOrange'); unscaleOrb(this);">
                 <p>Lively, Energy</p>
             </div>
         </a>

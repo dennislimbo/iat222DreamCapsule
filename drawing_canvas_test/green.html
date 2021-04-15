@@ -6,11 +6,35 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&family=Poppins:wght@500&display=swap" rel="stylesheet">
-        <title>Canvas Drawing Test</title>
+        <title>Participant - Green</title>
         <link rel="stylesheet" href="assets/css/sketch.css">
-        <link rel="stylesheet" href="assets/css/green.css">
         <script src="https://kit.fontawesome.com/db490c860c.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            #c0 {
+                background-color: #BAF48B;
+            }
+
+            #c1 {
+                background-color: #42E708;
+            }
+
+            #c2 {
+                background-color: #93D91F;
+            }
+
+            #c3 {
+                background-color: #00BF13;
+            }
+
+            #c4 {
+                background-color: #20921E;
+            }
+
+            #c5 {
+                background-color: #024E00;
+            }
+        </style>
     </head>
     <body>
 
@@ -25,10 +49,19 @@
         </nav>
 
         <div id="myLinks">
-            <a href="">Home</a>
-            <a href="draw.html">Participate</a>
-            <a href="">View Collection</a>
-            <a href="">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="choice.html">Participate</a>
+            <a href="view.html">View Collection</a>
+            <a href="mailto:tbdcollectivedreamcapsule@gmail.com">Contact</a>
+        </div>
+
+        <div id="instructions">
+            <h1>Download + Submit</h1>
+            <p>To share your dream in the Dream Capsule</p>
+            <ul>
+                <li>Download your sketch</li>
+                <li>Click submit and upload your dream (via Google Forms)</li>
+            </ul>
         </div>
 
         <!-- drawing canvas -->
@@ -36,15 +69,9 @@
             <div>
                 <canvas id="canvas">  
                 </canvas>
-                <div class="row" style="justify-content: space-between;">
-                    <form id="my-form">
-                        <div class="row">
-                            <input type="text" name="name" id="name" value="Name">
-                            <input type="text" name="country" id="country" value="Country">
-                        </div>
-                        <textarea name="description" id="description" cols="30" rows="5">Caption your dream...</textarea>
-                    </form>
+                <div class="row">
                     <div class="buttons">
+                        <button id="return" type="button">Return</button>
                         <button id="previous" type="button">Back</button>
                         <button id="next"type="button">Next</button>
                     </div>
@@ -81,7 +108,6 @@
                 </div>
             </div>
         </div>
-
         
 
         

@@ -101,6 +101,8 @@ h1 {
     border-radius: 100%;
     z-index: 10;
     cursor: pointer;
+    transition: 1s;
+    transition-timing-function: ease;
 }
 
 .orb:first-child {
@@ -117,7 +119,7 @@ h1 {
 .background {
     z-index: 1;
     /* adjusting this to a lower value works better for optimization */
-    filter: blur(150px);
+    filter: blur(100px);
 }
 
 #green {

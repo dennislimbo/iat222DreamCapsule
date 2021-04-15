@@ -194,6 +194,10 @@ nav div {
     margin-bottom: 20vh;
 }
 
+.main p {
+    color: black;
+}
+
 .container {
     display: flex;
     justify-content: center;

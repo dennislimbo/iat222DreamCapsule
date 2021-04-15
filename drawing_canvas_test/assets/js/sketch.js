@@ -20,25 +20,51 @@ window.addEventListener("load", () => {
     const colour5 = document.querySelector("#c5");
     var lastColour = window.getComputedStyle(colour0).backgroundColor;
 
-    //back and next buttons
+    //return, back and next buttons
+    const btnReturn = document.getElementById("return");
     const prev = document.getElementById("previous");
     const next = document.getElementById("next");
     var state = 0;
     
-    //back and next buttons behaviour
+    //margin for instructions
+    // document.getElementById("canvasComp").offsetLeft
+    // document.getElementById("instructions").style.paddingLeft = "" + document.getElementById("canvasComp").offsetRight +"px";
+    // alert(document.getElementById("drawingComp").offsetLeft);
+
+    //return, back and next buttons behaviour
+    btnReturn.addEventListener('click', () =>{
+        const controls = document.getElementById("controls");
+        // controls.style.opacity = "1";
+        controls.style.transform = "translateX(0px)";
+        controls.style.zIndex = "1";
+        canvas.style.borderRadius = "8px 0px 0px 8px";
+        state = 0;
+        prev.innerHTML = "BACK";
+        next.innerHTML = "NEXT";
+        prev.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        prev.style.border = "1px white solid";
+        next.style.backgroundColor = "#3A00F3";
+        next.style.border = "none";
+        btnReturn.style.visibility = "hidden";
+        document.getElementById("instructions").style.visibility = "hidden";
+    });
+
     prev.addEventListener('click', () => {
         if (state === 0) {
             window.location.href = 'choice.html';
         } else if (state === 1) {
-            const controls = document.getElementById("controls");
-            controls.style.visibility = "visible";
-            const form = document.getElementById("my-form");
-            form.style.visibility = "hidden";
-            // alert(form.visibility);
-            canvas.style.borderRadius = "8px 0px 0px 8px";
-            state = 0;
-            prev.innerHTML = "Back";
-            next.innerHTML = "Next";
+            // const controls = document.getElementById("controls");
+            // controls.style.visibility = "visible";
+            //move it over to the right, back to the original position
+            // canvas.style.borderRadius = "8px 0px 0px 8px";
+            state = 2;
+            // prev.innerHTML = "Back";
+            // next.innerHTML = "Next";
+            save(document.getElementById("canvas"));
+            prev.style.backgroundColor = "rgba(0, 0, 0, 0)";
+            prev.style.border = "1px white solid";
+            next.style.backgroundColor = "#3A00F3";
+            next.style.border = "none";
         }
     });
 
@@ -47,17 +73,22 @@ window.addEventListener("load", () => {
         if (state === 0) {
             // alert("hello");
             const controls = document.getElementById("controls");
-            controls.style.visibility = "hidden";
-            const form = document.getElementById("my-form");
-            form.style.visibility = "visible";
-            // alert("hello");
+            controls.style.zIndex = "-1";
+            // controls.style.opacity = "0";
+            controls.style.transform = "translateX(-70px)";
             canvas.style.borderRadius = "8px";
+            document.getElementById("instructions").style.visibility = "visible";
             state = 1;
-            //replace word with "cancel"?
-            prev.innerHTML = "Return";
-            next.innerHTML = "Submit";
-        } else if (state === 1) {
-            
+            btnReturn.style.visibility = "visible";
+            prev.innerHTML = "DOWNLOAD";
+            prev.style.backgroundColor = "#3A00F3";
+            prev.style.border = "none";
+            next.innerHTML = "SUBMIT";
+            next.style.backgroundColor = "rgba(0, 0, 0, 0)";
+            next.style.border = "1px white solid";
+        } else if (state === 2) {
+            window.open("https://forms.gle/Zr9nTBuW3d9SvnJV6");
+            window.location.href = "confirmation.html";
         }
     });
 
@@ -91,11 +122,11 @@ window.addEventListener("load", () => {
     }
 
     function draw(e) {
-        if (!painting || state === 1) return;
+        if (!painting || state === 1 || state === 2) return;
         var xOff = document.getElementById("canvas");
         var yOff = document.getElementById("drawingComp");
         var xOffset =  xOff.offsetLeft;
-        var yOffset =  window.innerHeight / 100 * 15 - window.pageYOffset;
+        var yOffset =  window.innerHeight / 100 * 17 - window.pageYOffset;
         // console.log("" + yOffset);
         // console.log("" + strokeWidth);
         if (ctx.strokeStyle !== "#ffffff") {
@@ -193,6 +224,8 @@ function save(canvas) {
     anchor.href = data;
     anchor.download = 'image.png';
     anchor.click();
+    // const anchor2 = anchor2.href = "https://www.google.ca";
+    
 }
 
 
